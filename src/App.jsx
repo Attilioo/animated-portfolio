@@ -1,5 +1,19 @@
-const App = () => {
-  return <div>Hello World</div>;
-};
+import './app.scss'
+import { Navbar } from './components/navbar/Navbar'
 
-export default App;
+const App = () => {
+  return (
+    <div>
+      <section>
+        {' '}
+        <Navbar />
+      </section>
+      <section>Parallax</section>
+      <section>Projects 1</section>
+      <section>Parallax</section>
+      <section>Contacts</section>
+    </div>
+  )
+}
+
+export default App
