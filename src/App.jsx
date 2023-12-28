@@ -1,16 +1,18 @@
 import './app.scss'
+import Hero from './components/hero/Hero'
 import { Navbar } from './components/navbar/Navbar'
 
 const App = () => {
   return (
     <div>
-      <section>
+      <section id="Homepage">
         {' '}
         <Navbar />
+        <Hero />
       </section>
-      <section>Parallax</section>
-      <section>Projects 1</section>
-      <section>Parallax</section>
+      <section id="Portfolio"> PORTFOLIO Parallax</section>
+      <section>Projects</section>
+      <section id="Contact"> CONTACT Parallax</section>
       <section>Contacts</section>
     </div>
   )
