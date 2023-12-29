@@ -1,12 +1,78 @@
 import './hero.scss'
+import { motion } from 'framer-motion'
+const textVariants = {
+  initial: {
+    opacity: 0,
+  },
+  animate: {
+    opacity: 1,
+    transition: {
+      duration: 0.75,
+      staggerChildren: 0.1,
+    },
+  },
+  scrollButton: {
+    opacity: 0,
+    y: 10,
+    transition: {
+      duration: 2,
+      repeat: Infinity,
+    },
+  },
+}
+const sliderVariants = {
+  initial: {
+    x: 0,
+  },
+  animate: {
+    x: '-220%',
+    transition: {
+      repeat: Infinity,
+      duration: 20,
+      repeatType: 'mirror',
+    },
+  },
+}
 export default function Hero() {
   return (
     <div className="hero">
-      <div className="imageContainer">
-        <img
-          src="/astronaut.png"
-          alt="An astronaut coding on a laptop in space"
-        />
+      <div className="wrapper">
+        <motion.div
+          className="textContainer"
+          variants={textVariants}
+          initial="initial"
+          animate="animate"
+        >
+          <motion.h2 variants={textVariants}>ATTILIO ANDREA MAROTTA</motion.h2>
+          <motion.h1 variants={textVariants}>
+            Software Developer / <br />
+            Web Developer
+          </motion.h1>
+          <motion.div className="buttons" variants={textVariants}>
+            <motion.button variants={textVariants}>My Work</motion.button>
+            <motion.button variants={textVariants}>Contact Me</motion.button>
+          </motion.div>
+          <motion.img
+            src="/scroll.png"
+            alt=""
+            variants={textVariants}
+            animate="scrollButton"
+          />
+        </motion.div>
+        <motion.div
+          className="slidingTextContainer"
+          variants={sliderVariants}
+          initial="initial"
+          animate="animate"
+        >
+          Software Developer Web Developer
+        </motion.div>
+        <div className="imageContainer">
+          <img
+            src="/astronaut.png"
+            alt="An astronaut coding on a laptop in space"
+          />
+        </div>
       </div>
     </div>
   )
