@@ -48,10 +48,16 @@ export default function Hero() {
             Software Developer / <br />
             Web Developer
           </motion.h1>
-          <motion.div className="buttons" variants={textVariants}>
-            <motion.button variants={textVariants}>My Work</motion.button>
-            <motion.button variants={textVariants}>Contact Me</motion.button>
-          </motion.div>
+          <motion.h3 variants={textVariants} className="description">
+            Creative software developer leveraging a background in arts and
+            marketing to build compelling, user-centric solutions.
+            <br />
+            My unique perspective allows me to approach problem-solving from
+            various angles, ensuring optimal and innovative outcomes. <br />
+            Driven by passion, I strive to transform challenges into
+            opportunities for growth and learning.
+          </motion.h3>
+
           <motion.img
             src="/scroll.png"
             alt=""

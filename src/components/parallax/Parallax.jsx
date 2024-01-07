@@ -1,7 +1,8 @@
-import React, { useRef } from 'react'
+import { useRef } from 'react'
 import './parallax.scss'
 import { motion, useScroll, useTransform } from 'framer-motion'
-export default function Parallax({ type }) {
+
+const Parallax = ({ type }) => {
   const ref = useRef()
 
   const { scrollYProgress } = useScroll({
@@ -11,6 +12,7 @@ export default function Parallax({ type }) {
 
   const yText = useTransform(scrollYProgress, [0, 1], ['0%', '500%'])
   const yBg = useTransform(scrollYProgress, [0, 1], ['0%', '100%'])
+
   return (
     <div
       className="parallax"
@@ -23,20 +25,21 @@ export default function Parallax({ type }) {
       }}
     >
       <motion.h2 style={{ y: yText }}>
-        {type === 'portfolio' ? 'Portfolio' : 'Contact Me'}
+        {type === 'portfolio' ? 'Portfolio' : 'Contact'}
       </motion.h2>
       <motion.div className="mountains"></motion.div>
       <motion.div
         className="planets"
         style={{
           y: yBg,
-
           backgroundImage: `url(${
             type === 'portfolio' ? '/planets.png' : '/sun.png'
           })`,
         }}
       ></motion.div>
-      <motion.div className="stars" style={{ x: yBg }}></motion.div>
+      <motion.div style={{ x: yBg }} className="stars"></motion.div>
     </div>
   )
 }
+
+export default Parallax
