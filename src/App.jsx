@@ -8,6 +8,7 @@ import Portfolio from './components/portfolio/Portfolio'
 const App = () => {
   return (
     <div>
+      {' '}
       <section id="Homepage">
         <Navbar />
         <Hero />
@@ -15,12 +16,11 @@ const App = () => {
       <section id="Portfolio">
         <Parallax type="portfolio" />
       </section>
-
       <Portfolio />
-      <section>
+      <section id="Contact">
         <Parallax type="contact" />
       </section>
-      <section id="Contact">
+      <section>
         <Contact />
       </section>
     </div>
