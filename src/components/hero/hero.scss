@@ -79,14 +79,17 @@
     right: 20px;
 
     @include mobile {
+      display: flex;
+      align-items: start;
+      justify-content: center;
       height: 50%;
       width: 100%;
       top: 0;
       bottom: 0;
       height: 100%;
       position: absolute;
-      top: 339px;
-      right: -90px;
+      top: 362px;
+      right: 10px;
     }
 
     img {

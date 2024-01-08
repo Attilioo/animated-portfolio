@@ -1,5 +1,5 @@
 import './hero.scss'
-import { motion } from 'framer-motion'
+import { mirrorEasing, motion } from 'framer-motion'
 const textVariants = {
   initial: {
     opacity: 0,
@@ -15,8 +15,10 @@ const textVariants = {
     opacity: 0,
     y: 10,
     transition: {
-      duration: 2,
+      duration: 2.5,
+      ease: 'easeInOut',
       repeat: Infinity,
+      repeatType: 'mirror',
     },
   },
 }

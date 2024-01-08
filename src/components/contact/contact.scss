@@ -19,6 +19,15 @@
     display: flex;
     flex-direction: column;
     gap: 40px;
+    .item {
+      display: flex;
+      align-items: center;
+    }
+
+    svg {
+      stroke: white;
+      padding: 10px;
+    }
     @include mobile {
       gap: 20px;
       text-align: center;
@@ -33,8 +42,9 @@
       }
     }
 
-    h4 {
-      font-size: 37px;
+    h3 {
+      font-size: 24px;
+      font-weight: 400;
     }
 
     span {
@@ -57,6 +67,13 @@
       position: absolute;
       margin: auto;
       z-index: -1;
+
+      svg {
+        @include mobile {
+          width: 300px;
+          height: 300px;
+        }
+      }
     }
 
     form {

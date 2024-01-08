@@ -8,7 +8,7 @@ const items = [
   },
   {
     id: 2,
-    title: 'Nortcoders Final Project: Skill Share',
+    title: 'Northcoders Final Project: Skill Share',
     img: './SKILL.jpeg',
     desc: 'Skillshare is a platform for people to connect over services provided/needed with a instant messaging service and posts to explore what type of skillset users are looking for. The Back-End is a MongoDB database controlled with Python and the RenderPython framework. The front-end is build using VUE.js and Typescript.',
     link: 'https://github.com/TomMirfin/skill-share-BE',
