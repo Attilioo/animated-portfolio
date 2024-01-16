@@ -10,7 +10,7 @@ const items = [
     id: 2,
     title: 'Studio Arzere',
     img: './arzere.webp',
-    desc: 'Studio Arzere is a well established architecture firm in Venice, Italy. They have worked on many projects, including rebuilding their website from the ground up with our help. My work comprised of a total design makeover and a full stack build and manteinance of their website.',
+    desc: 'Studio Arzere is a well established architecture firm in Venice, Italy. They have worked on many projects, including rebuilding their website from the ground up with the help of the team I was in. My work comprised of a total design makeover and a full stack build and manteinance of their website.',
     link: 'https://studioarzere.webflow.io/',
   },
   {
